@@ -4,12 +4,12 @@ pipeline {
 	stages {
 		stage('Build') {
 			steps {
-				sh 'composer install'
+				powershell 'composer install'
 			}
 		}
 		stage('Test') {
 			steps {
-                sh './vendor/bin/phpunit tests'
+                powershell './vendor/bin/phpunit tests'
             }
 		}
 	}

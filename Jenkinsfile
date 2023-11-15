@@ -4,7 +4,7 @@ pipeline {
 	stages {
 		stage('Build') {
 			steps {
-				powershell 'composer install'
+				bat 'composer install'
 			}
 		}
 		stage('Test') {
